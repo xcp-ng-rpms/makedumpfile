@@ -1,6 +1,6 @@
 Name:		makedumpfile
 Version:	1.5.8
-Release:	2
+Release:	2%{dist}
 Summary:	Helper for making coredump files smaller
 
 Group:		System Environment/Base
