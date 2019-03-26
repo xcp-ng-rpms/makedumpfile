@@ -12,6 +12,7 @@ Patch0:     0001-PATCH-1-2-Enable-compressed-dump-formats-for-Xen.patch
 Patch1:     0002-PATCH-2-2-Remove-notes-about-ELF-being-the-only-avai.patch
 
 BuildRoot:	%(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
+Buildrequires:  gcc
 BuildRequires:	elfutils-devel, zlib-devel, bzip2-devel, xz-devel
 Requires:	elfutils, zlib
 
