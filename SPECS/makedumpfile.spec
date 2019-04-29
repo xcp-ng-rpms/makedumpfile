@@ -7,9 +7,14 @@ Group:		System Environment/Base
 License:	GPLv2
 URL:		http://makedumpfile.sourceforge.net/
 #Source0:    http://heanet.dl.sourceforge.net/sourceforge/makedumpfile/%{name}-%{version}.tar.gz
-Source0:    https://repo.citrite.net/xs-local-contrib/makedumpfile/makedumpfile-1.5.8.tar.gz
-Patch0:     0001-PATCH-1-2-Enable-compressed-dump-formats-for-Xen.patch
-Patch1:     0002-PATCH-2-2-Remove-notes-about-ELF-being-the-only-avai.patch
+
+Source0: https://repo.citrite.net/xs-local-contrib/makedumpfile/makedumpfile-1.5.8.tar.gz
+Patch0: SOURCES/makedumpfile/0001-PATCH-1-2-Enable-compressed-dump-formats-for-Xen.patch
+Patch1: SOURCES/makedumpfile/0002-PATCH-2-2-Remove-notes-about-ELF-being-the-only-avai.patch
+
+
+Provides: gitsha(https://code.citrite.net/rest/archive/latest/projects/XS/repos/makedumpfile/archive?at=1.0.0&format=tar#/makedumpfile.patches.tar) = 7a645363d64d4df52e35132c47af3a0a5953e102
+
 
 BuildRoot:	%(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 BuildRequires:	elfutils-devel, zlib-devel, bzip2-devel, xz-devel
